@@ -56,7 +56,7 @@ impl Tonic {
             grpc_config.host
         };
 
-        let scheme = if cfg!(feature = "tls") {
+        let scheme = if cfg!(feature = "tls") && grpc_config.port == Some(443) {
             "https"
         } else {
             "http"

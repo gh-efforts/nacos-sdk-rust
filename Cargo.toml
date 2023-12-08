@@ -41,7 +41,7 @@ members = [
 default = ["config", "naming", "auth-by-http"]
 config = []
 naming = []
-tls = ["reqwest/default-tls"]
+tls = ["reqwest/rustls-tls"]
 auth-by-http = ["reqwest"]
 async = []
 

@@ -48,7 +48,7 @@ impl AuthPlugin for HttpLoginAuthPlugin {
                 .to_string()
         };
 
-        let scheme = if cfg!(feature = "tls") {
+        let scheme = if cfg!(feature = "tls") && server_addr.ends_with("443") {
             "https"
         } else {
             "http"
