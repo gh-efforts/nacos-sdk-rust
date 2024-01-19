@@ -66,8 +66,8 @@ impl AuthPlugin for HttpLoginAuthPlugin {
             tracing::debug!("Http login resp={resp:?}");
 
             match resp {
-                Err(e) => {
-                    tracing::error!("Http login error, send response failed, err={e}");
+                Err(_) => {
+                    tracing::error!("Http login error, send response failed");
                     None
                 }
                 Ok(resp) => {
